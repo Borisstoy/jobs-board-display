@@ -1,5 +1,9 @@
 <%= form_for [@job] do |f| %>
-			
+
+	<div class="field">
+		<%= f.collection_select :category_id, Category.all, :id, :name, {prompt: "Choose a category"} %><br>
+	</div>
+
 	<div class="field">
 		<%= f.label :"Job Title" %><br>
 		<%= f.text_field :title %>
@@ -26,6 +30,6 @@
 	</div>
 
 	<div class="actions">
-		<%= f.submit "Create a Job", class:"button button_highlight button_block" %>
+		<%= f.submit "Edit job", class:"button button_highlight button_block" %>
 	</div>
 <% end %>

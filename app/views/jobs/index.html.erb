@@ -11,7 +11,7 @@
 					<span class="job_title"><%= job.title%></span>
 					<span class="job_info"><%= job.company %> <span>&vert;</span> <%= job.city %> <span>&vert;</span> Jan 1st 2017</span></span>
 				</div>
-				<span class="job_type full_time">Full-Time</span>
+				<span class="job_type full_time"><%= job.category %></span>
 			</li>
 			<% end %>
 		<% end %>
