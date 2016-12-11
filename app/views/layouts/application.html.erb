@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>Fitsyu - Jobs In Tech</title>
-	<link rel="stylesheet" type="text/css" href="scss/styles.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -24,12 +23,11 @@
 			<a href="#" class="menu"><i class="fa fa-bars"></i></a>
 			<nav id="main_nav">
 				<ul>
-					<li href= "#">All Jobs</li>
+					<li><%= link_to "All Jobs", root_path %></li>
+					<% Category.all.each do |category| %>
+						<li href= "#"><%= link_to category.name, jobs_path(category: category.name) %></li>
+					<% end %>
 					<li href= "#">Map</li>
-					<li href= "#">Full-Time</li>
-					<li href= "#">Part-Time</li>
-					<li href= "#">Freelance</li>
-					<li href= "#">Remote</li>
 					<li href= "#">Contact</li>
 				</ul>
 			</nav>
@@ -38,7 +36,7 @@
 
 	<div id="banner_welcome">
 		<div class="wrapper cleafirx">
-			<h1>Jobs Around<br><span>That Fit You.</span></h1>
+			<h1>Tech Jobs Around<br><span>That Fit You.</span></h1>
 		</div>
 	</div>
   
@@ -54,4 +52,5 @@
 	</footer>
 
 	</body>
+
 </html>

@@ -1,22 +1,13 @@
-<div class="wrapper_skinny">
-	<ul id="timeline">
-		<li class="listing clearfix">
-			<div class="image_wrapper">
-				<img src="images/hibernum.png" alt="Hibernum" class="image_job_type">
-			</div>
-			<div class="info">
-				<span class="job_title"><%= @job.title %></span>
-				<span class="job_info"><%= @job.company %> <span>&vert;</span> <%= @job.city %> <span>&vert;</span> Jan 1st 2017</span></span>
-				<span class="job_info"><%= @job.description %></span>
-				<span class="job_info"><%= @job.url %></span>
-			</div>
-			<span class="job_type full_time">Full-Time</span>
-		</li>
-	</ul>
-	<%= link_to "Home", root_path %>
-	<%= link_to "Edit", edit_job_path %>
-	<%= link_to "Delete", job_path(@job), method: :delete, data: {confirm: "Are you sure?"} %>
-</div>
+<%= @job.title %>
+<%= @job.company %>
+<%= @job.city %> 
+Jan 1st 2017
+<%= @job.description %>
+<%= @job.url %>
+<%= @job.category %>
+<%= link_to "Home", root_path %>
+<%= link_to "Edit", edit_job_path %>
+<%= link_to "Delete", job_path(@job), method: :delete, data: {confirm: "Are you sure?"} %>
 
 
 
